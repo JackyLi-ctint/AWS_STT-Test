@@ -4,3 +4,7 @@ build/
 *.tfstate.*
 terraform.tfvars
 crash.log
+
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
