@@ -1,0 +1,12 @@
+aws_region                   = "ap-east-1"
+project_name                 = "audio-search"
+environment                  = "dev"
+input_bucket_name            = "replace-with-unique-audio-input-bucket"
+transcribe_output_bucket_name = "replace-with-unique-transcribe-output-bucket"
+transcribe_output_prefix     = "jobs/"
+transcribe_job_name_prefix   = "audio-search"
+transcript_output_table      = "not-configured"
+
+tags = {
+  Owner = "replace-me"
+}

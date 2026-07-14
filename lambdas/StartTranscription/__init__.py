@@ -1,0 +1,1 @@
+"""StartTranscription Lambda package."""
