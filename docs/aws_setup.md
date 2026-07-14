@@ -19,6 +19,28 @@ It does not yet provision Aurora PostgreSQL or OpenSearch because the current co
 - PowerShell 5.1+
 - GitHub repository with Actions enabled
 
+## Terraform Credentials
+
+Do not put AWS credentials in this repository, in `terraform.tfvars`, or in any workflow file.
+
+Use one of these safe options before running `terraform init` or `terraform apply`:
+
+1. Local AWS profile with `aws configure` and `AWS_PROFILE`.
+2. Temporary environment variables such as `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN`.
+3. For GitHub Actions, use GitHub Secrets or OIDC-based role assumption instead of static keys.
+
+Example local usage:
+
+```powershell
+$env:AWS_PROFILE = "your-profile-name"
+Set-Location .\terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+If you use a named profile, keep the profile definition in your local AWS config files, not in Git.
+
 ## 1. Configure AWS Credentials
 
 Use one of these approaches before running Terraform:

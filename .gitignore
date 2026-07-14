@@ -4,7 +4,21 @@ build/
 *.tfstate.*
 terraform.tfvars
 crash.log
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+Thumbs.db
+.DS_Store
 
 # Python cache/bytecode
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
