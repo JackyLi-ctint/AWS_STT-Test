@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build-test:
+    name: CI Build and Test
     runs-on: windows-latest
     steps:
       - name: Checkout
