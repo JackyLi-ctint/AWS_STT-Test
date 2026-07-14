@@ -122,7 +122,7 @@ Those are the next AWS slices after this bootstrap deploy succeeds.
 
 After CI is stable, extend the workflow in phases:
 
-1. Add Terraform formatting and validation checks.
+1. Add Terraform formatting and validation checks. This is implemented as the `Terraform PR Checks` workflow.
 2. Add `terraform plan` on pull requests.
 3. Add environment deployment workflows (dev auto, uat/prod with approvals).
 4. Add post-deploy smoke test automation.
